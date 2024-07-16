@@ -36,8 +36,8 @@ async function fetchInterpretation(id:string) {
         const response = await database.updateDocument(process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID as string, "6694e74d003dfb5fa0cb", id, data)
         return response;
     } catch (error) {
-        console.error("Error deleting interpretation", error)
-        throw new Error("Failed to delete interpretation") 
+        console.error("Error updating interpretation", error)
+        throw new Error("Failed to update interpretation") 
     }
  }
 
